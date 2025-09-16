@@ -8,6 +8,8 @@ const pilLabel2 = document.getElementById("pilLabel2");
 
 const pil1ValueProgress = document.getElementById("prog-1");
 const pil2ValueProgress = document.getElementById("prog-2");
+const progress = document.querySelectorAll(".progress");
+const animated = document.querySelectorAll(".animated-progress span");
 
 
 
@@ -18,18 +20,22 @@ document.addEventListener("snippet1Ready", (e) => {
     dataSnbp.forEach(el => {
         if (el.singkatan === params.get("ptn1")) {
             pilLabel1.textContent = `${el.ptn} ${Math.ceil(Number(params.get("predictPtnA")))}%`
+            progress[0].setAttribute("data-progress", Math.ceil(Number(params.get("predictPtnA"))))
         }
 
         if (el.singkatan === params.get("ptn2")) {
             pilLabel2.textContent = `${el.ptn} ${Math.ceil(Number(params.get("predictPtnB")))}%`
+            progress[1].setAttribute("data-progress", Math.ceil(Number(params.get("predictPtnA"))))
         }
     });
+    
 
     pil1ValueProgress.value = params.get("predictPtnA")
     pil2ValueProgress.value = params.get("predictPtnB")
 
 })
-const animated = document.querySelectorAll(".animated-progress span");
+
+
 
 animated.forEach(function (el) {
     el.animate(
@@ -39,6 +45,6 @@ animated.forEach(function (el) {
         1000
     ).finished.then(() => {
         el.style.width = el.getAttribute("data-progress") + "%";
+        el.textContent = el.getAttribute("data-progress") + "%";
     });
-    el.textContent = el.getAttribute("data-progress") + "%";
 });

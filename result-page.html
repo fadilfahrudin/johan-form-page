@@ -84,7 +84,7 @@
             width: 100%;
             padding: 8px;
             gap: 8px;
-            font-size: clamp(8px, 1.5vw, 10px);
+            font-size: clamp(12px, 1.3vw, 14px);
             font-style: italic;
             border-top: 1px solid var(--color-black);
         }
@@ -93,6 +93,7 @@
             display: flex;
             flex-direction: column;
             gap: 8px;
+            width: 100%;
         }
 
         progress {
@@ -132,40 +133,33 @@
         }
 
         .animated-progress {
-            width: 300px;
-            height: 30px;
+            display: block;
+            width: 100%;
+            height: 25px;
             border-radius: 5px;
-            margin: 20px 10px;
-            border: 1px solid rgb(189, 113, 113);
+            border: 1px solid var(--color-black);
             overflow: hidden;
             position: relative;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
         }
 
         .animated-progress span {
             height: 100%;
-            display: block;
             width: 0;
             color: rgb(255, 251, 251);
-            line-height: 30px;
+            line-height: 25px;
             position: absolute;
             text-align: end;
             padding-right: 5px;
+            font-size: 12px;
         }
 
-        .progress-blue span {
-            background-color: blue;
+        .progress-yellow span {
+            background-color: var(--color-yellow);
         }
 
         .progress-green span {
-            background-color: green;
-        }
-
-        .progress-purple span {
-            background-color: indigo;
-        }
-
-        .progress-red span {
-            background-color: red;
+            background-color: var(--color-green);
         }
     </style>
 </head>
@@ -176,29 +170,23 @@
             <div class="headerContent">Prediksi Kelulusan SNBP</div>
             <div class="bodyContent">
                 <div class="progressResult">
-                    <div>
-                        <label for="prog-1" id="pilLabel1"></label>
+                    <!-- <div>
                         <progress id="prog-1" max="100" value=""></progress>
                     </div>
                     <div>
-                        <label for="prog-2" id="pilLabel2"></label>
                         <progress id="prog-2" max="100" value=""></progress>
+                    </div> -->
+
+                    <label for="prog-1" id="pilLabel1"></label>
+                    <div class="animated-progress progress-yellow">
+                        <span class="progress" data-progress="0"></span>
+                    </div>
+                    <label for="prog-2" id="pilLabel2"></label>
+                    <div class="animated-progress progress-green">
+                        <span class="progress" data-progress="0"></span>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div class="animated-progress progress-blue">
-            <span data-progress="45"></span>
-        </div>
-        <div class="animated-progress progress-green">
-            <span data-progress="60"></span>
-        </div>
-        <div class="animated-progress progress-purple">
-            <span data-progress="70"></span>
-        </div>
-        <div class="animated-progress progress-red">
-            <span data-progress="85"></span>
         </div>
     </main>
 
