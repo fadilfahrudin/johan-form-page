@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Rasionalisasi SNBP</title>
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		:root {
+			--color-white: #f4f4f4;
+			--color-black: #212121;
+			--color-disabled: #e0e0e0;
+			--color-yellow: #fcb900;
+			--color-yellow-disabled: #fcb900c1;
+			--color-green: rgb(2, 106, 92);
+			--color-green-disabled: rgba(2, 106, 92, 0.654);
+		}
+
+		body {
+			font-family: "Poppins", sans-serif;
+			background-color: var(--color-white);
+			color: var(--color-black);
+		}
+
+		.container {
+			width: 40%;
+			min-height: 100vh;
+			margin: 20px auto;
+		}
+
+		.formGroup {
+			width: 100%;
+			min-height: 200px;
+			height: auto;
+			margin: 0 auto;
+		}
+
+		.formGroup h2.headerContent {
+			width: 100%;
+			height: auto;
+			line-height: 150%;
+			text-align: start;
+			color: var(--color-black);
+			padding: 8px 0;
+			font-size: clamp(16px, 2vw, 18px);
+			font-weight: 700;
+		}
+
+		.formGroup .bodyContent {
+			width: 100%;
+			padding: 12px;
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+			border: 3px solid var(--color-black);
+			border-radius: 8px;
+		}
+
+		form .formGroup .bodyContent label span {
+			display: block;
+			margin-bottom: 8px;
+			font-size: 14px;
+			font-weight: 600;
+		}
+
+		.formGroup .footerContent {
+			width: 100%;
+			padding: 8px;
+			gap: 8px;
+			font-size: clamp(8px, 1.5vw, 10px);
+			font-style: italic;
+		}
+
+		form {
+			display: flex;
+			flex-direction: column;
+			gap: 16px;
+		}
+
+		select {
+			cursor: pointer;
+			background-color: var(--color-white);
+			border: 3px solid var(--color-black);
+			border-radius: 5px;
+			width: 100%;
+			height: auto;
+			padding: 8px 12px;
+			user-select: none;
+
+			color: var(--color-black);
+			font-family: Lato, sans-serif;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 400;
+			overflow: hidden;
+		}
+
+		button.btn-next {
+			cursor: pointer;
+			width: 100%;
+			margin: 0 auto;
+			padding: 8px 12px;
+			background-color: var(--color-green);
+			color: var(--color-white);
+			border: 2px solid var(--color-black);
+			border-radius: 5px;
+			font-size: clamp(12px, 2vw, 14px);
+			font-weight: 600;
+			transition: all 0.3s ease-in-out;
+		}
+
+		button.btn-next:hover {
+			background-color: var(--color-yellow-disabled);
+			color: var(--color-black);
+		}
+
+		@media screen and (max-width: 900px) {
+			.container {
+				width: 60%;
+			}
+		}
+
+		@media screen and (max-width: 600px) {
+			.container {
+				width: 90%;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<main class="container">
+		<form id="snbp-form-next">
+			<div class="formGroup">
+				<h2 class="headerContent">Pilihan Pertama</h2>
+				<div class="bodyContent">
+					<label for="ptn1">
+						<span>PTN/Politeknik Negeri</span>
+						<select name="" id="ptn1" required>
+							<option value="" selected>Pilih Kampus</option>
+						</select>
+					</label>
+					<label for="prodi1">
+						<span>Jurusan/Prodi</span>
+						<select name="" id="prodi1" required>
+							<option value="" selected>Pilih Jurusan/Prodi</option>
+						</select>
+					</label>
+				</div>
+			</div>
+
+			<div class="formGroup">
+				<h2 class="headerContent">Pilihan Kedua</h2>
+				<div class="bodyContent">
+					<label for="ptn2">
+						<span>PTN/Politeknik Negeri</span>
+						<select name="" id="ptn2" required>
+							<option value="" selected>Pilih Kampus</option>
+						</select>
+					</label>
+					<label for="prodi2">
+						<span>Jurusan/Prodi</span>
+						<select name="" id="prodi2" required>
+							<option value="" selected>Pilih Jurusan/Prodi</option>
+						</select>
+					</label>
+				</div>
+				<div class="footerContent">
+					*Pendaftar diperbolehkan memilih <b>maksimal dua Perguruan Tinggi Negeri (PTN)/Politeknik
+						Negeri.</b><br />
+					*Salah satu pilihan wajib berada <b> dalam provinsi yang sama dengan domisili sekolah pendaftar.</b>
+				</div>
+			</div>
+
+			<button class="btn-next" type="submit">Selanjutnya Isi Nilai Raport</button>
+		</form>
+	</main>
+
+	<script src="snbp-script-2.js"></script>
+	<!-- Data Contant Taruh di paling bawah -->
+	<script src="snbp-script-1.js"></script>
+</body>
+
+</html>

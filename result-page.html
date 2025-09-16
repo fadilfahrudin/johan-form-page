@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --color-white: #f4f4f4;
+            --color-black: #212121;
+            --color-disabled: #e0e0e0;
+            --color-yellow: #fcb900;
+            --color-yellow-disabled: #fcb900c1;
+            --color-green: rgb(2, 106, 92);
+            --color-green-disabled: rgba(2, 106, 92, 0.654);
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: var(--color-white);
+            color: var(--color-black);
+        }
+
+        .container {
+            width: 40%;
+            min-height: 100vh;
+            margin: 20px auto;
+        }
+
+        button.btn-next {
+            cursor: pointer;
+            width: 100%;
+            margin: 0 auto;
+            padding: 8px 12px;
+            background-color: var(--color-green);
+            color: var(--color-white);
+            border: 2px solid var(--color-black);
+            border-radius: 5px;
+            font-size: clamp(12px, 2vw, 14px);
+            font-weight: 600;
+            transition: all 0.3s ease-in-out;
+        }
+
+        button.btn-next:hover {
+            background-color: var(--color-yellow-disabled);
+            color: var(--color-black);
+        }
+
+        .cardResult {
+            width: 100%;
+            height: auto;
+            border: 2px solid var(--color-black);
+            margin: 0 auto;
+            border-radius: 8px;
+        }
+
+        .cardResult .headerContent {
+            width: 100%;
+            height: auto;
+            line-height: 150%;
+            text-align: center;
+            background-color: var(--color-black);
+            color: var(--color-white);
+            padding: 8px 0;
+        }
+
+        .cardResult .bodyContent {
+            width: 100%;
+            padding: 8px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .cardResult .footerContent {
+            width: 100%;
+            padding: 8px;
+            gap: 8px;
+            font-size: clamp(8px, 1.5vw, 10px);
+            font-style: italic;
+            border-top: 1px solid var(--color-black);
+        }
+
+        .progressResult {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        progress {
+            background-color: #eee;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+            width: 100%;
+        }
+
+        progress::-moz-progress-bar {
+            background-color: rgb(206, 209, 12);
+            border-radius: 7px;
+            box-shadow: 1px 1px 3px 3px rgba(28, 27, 27, 0.102);
+        }
+
+        progress#prog-2::-moz-progress-bar {
+            background-color: rgb(58, 244, 111);
+        }
+
+        progress::-webkit-progress-bar {
+            background-color: #eee;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+        }
+
+
+        @media screen and (max-width: 900px) {
+            .container {
+                width: 60%;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .container {
+                width: 90%;
+            }
+        }
+
+        .animated-progress {
+            width: 300px;
+            height: 30px;
+            border-radius: 5px;
+            margin: 20px 10px;
+            border: 1px solid rgb(189, 113, 113);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .animated-progress span {
+            height: 100%;
+            display: block;
+            width: 0;
+            color: rgb(255, 251, 251);
+            line-height: 30px;
+            position: absolute;
+            text-align: end;
+            padding-right: 5px;
+        }
+
+        .progress-blue span {
+            background-color: blue;
+        }
+
+        .progress-green span {
+            background-color: green;
+        }
+
+        .progress-purple span {
+            background-color: indigo;
+        }
+
+        .progress-red span {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="container">
+        <div class="cardResult">
+            <div class="headerContent">Prediksi Kelulusan SNBP</div>
+            <div class="bodyContent">
+                <div class="progressResult">
+                    <div>
+                        <label for="prog-1" id="pilLabel1"></label>
+                        <progress id="prog-1" max="100" value=""></progress>
+                    </div>
+                    <div>
+                        <label for="prog-2" id="pilLabel2"></label>
+                        <progress id="prog-2" max="100" value=""></progress>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="animated-progress progress-blue">
+            <span data-progress="45"></span>
+        </div>
+        <div class="animated-progress progress-green">
+            <span data-progress="60"></span>
+        </div>
+        <div class="animated-progress progress-purple">
+            <span data-progress="70"></span>
+        </div>
+        <div class="animated-progress progress-red">
+            <span data-progress="85"></span>
+        </div>
+    </main>
+
+    <script src="snbp-script-4.js"></script>
+    <!-- Data Contant Taruh di paling bawah -->
+    <script src="snbp-script-1.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Rasionalisasi SNBP</title>
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		:root {
+			--color-white: #f4f4f4;
+			--color-black: #212121;
+			--color-disabled: #e0e0e0;
+			--color-yellow: #fcb900;
+			--color-yellow-disabled: #fcb900c1;
+			--color-green: rgb(2, 106, 92);
+			--color-green-disabled: rgba(2, 106, 92, 0.654);
+		}
+
+		body {
+			font-family: 'Poppins', sans-serif;
+			background-color: var(--color-white);
+			color: var(--color-black);
+		}
+
+		.container {
+			width: 50%;
+			min-height: 100vh;
+			margin: 20px auto;
+		}
+
+		.formGroup {
+			width: 100%;
+			min-height: 200px;
+			height: auto;
+			margin: 0 auto;
+		}
+
+		.formGroup h2.headerContent {
+			width: 100%;
+			height: auto;
+			line-height: 150%;
+			text-align: start;
+			color: var(--color-black);
+			padding: 8px 0;
+			font-size: clamp(16px, 2vw, 18px);
+			font-weight: 700;
+		}
+
+		.formGroup .bodyContent {
+			width: 100%;
+			padding: 12px;
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+			border: 3px solid var(--color-black);
+			border-radius: 8px;
+		}
+
+		form .formGroup .bodyContent label span {
+			display: block;
+			margin-bottom: 8px;
+			font-size: 14px;
+			font-weight: 600;
+		}
+
+		.formGroup .footerContent {
+			width: 100%;
+			padding: 8px;
+			gap: 8px;
+			font-size: clamp(8px, 1.5vw, 10px);
+			font-style: italic;
+		}
+
+		form {
+			display: flex;
+			flex-direction: column;
+			gap: 16px;
+		}
+
+		select {
+			cursor: pointer;
+			background-color: var(--color-white);
+			border: 2px solid var(--color-black);
+			border-radius: 5px;
+			width: 100%;
+			height: auto;
+			padding: 8px 12px;
+			user-select: none;
+
+			color: var(--color-black);
+			font-family: Lato, sans-serif;
+			font-size: clamp(12px, 2vw, 14px);
+			font-style: normal;
+			font-weight: 400;
+			overflow: hidden;
+		}
+
+		input {
+			width: 100%;
+			padding: 8px 12px;
+			border-radius: 5px;
+			border: 2px solid var(--color-black);
+			font-size: clamp(12px, 2vw, 14px);
+			background-color: var(--color-white);
+		}
+
+		button.btn-next {
+			cursor: pointer;
+			width: 100%;
+			margin: 0 auto;
+			padding: 8px 12px;
+			background-color: var(--color-green);
+			color: var(--color-white);
+			border: 2px solid var(--color-black);
+			border-radius: 5px;
+			font-size: clamp(12px, 2vw, 14px);
+			font-weight: 600;
+			transition: all 0.3s ease-in-out;
+		}
+
+		button.btn-next:hover {
+			background-color: var(--color-yellow-disabled);
+			color: var(--color-black);
+		}
+
+		@media screen and (max-width: 900px) {
+			.container {
+				width: 70%;
+			}
+		}
+
+		@media screen and (max-width: 600px) {
+			.container {
+				width: 90%;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<main class="container">
+		<form id="snbp-form-2">
+			<div class="formGroup">
+				<h2 class="headerContent">Profil Sekolah</h2>
+				<div class="bodyContent">
+					<label for="domisiliSekolah">
+						<span>Domisili Sekolah</span>
+						<select name="" id="domisiliSekolah" required>
+							<option value="" selected>Pilih Provinsi</option>
+						</select>
+					</label>
+					<label for="peingkatSekolah">
+						<span>Peringkat Sekolah</span>
+						<select name="" id="peingkatSekolah" required>
+							<option value="" selected>Pilih Peringkat</option>
+							<option value="5">1 - 100</option>
+							<option value="4.5">101 - 200</option>
+							<option value="4">201 - 300</option>
+							<option value="3.5">301 - 400</option>
+							<option value="3">401 - 500</option>
+							<option value="2.5">501 - 600</option>
+							<option value="2">601 - 700</option>
+							<option value="1.5">701 - 800</option>
+							<option value="1">801 - 900</option>
+							<option value="0.5">901 - 1000</option>
+							<option value="0">Lebih dari 1000</option>
+						</select>
+					</label>
+					<label for="akreditasSkolah">
+						<span>Akreditas Sekolah</span>
+						<select name="" id="akreditasSkolah" required>
+							<option value="" selected>Pilih Akreditas</option>
+							<option value="5">A</option>
+							<option value="4">B</option>
+							<option value="2">C</option>
+						</select>
+					</label>
+				</div>
+			</div>
+
+			<div class="formGroup">
+				<h2 class="headerContent">Reputasi Alumni</h2>
+				<div class="bodyContent">
+					<!-- Dinamsi field -->
+					<label for="infoAlumni1">
+						<span id="infoAlumniLabel1"></span>
+						<select name="" id="infoAlumni1" required>
+							<option value="" selected>Pilih Jumlah Alumni di PTN</option>
+							<option value="0">Tidak Ada</option>
+							<option value="0.5">1 - 10</option>
+							<option value="1">11 - 20</option>
+							<option value="1.5">21 - 40</option>
+							<option value="2"> >40 </option>
+						</select>
+					</label>
+					<label for="isAlumniRegisted1">
+						<span id="isAlumniRegistedLabel1"></span>
+						<select name="" id="isAlumniRegisted1" required>
+							<option value="0" selected>Tidak Ada</option>
+							<option value="1">Ada</option>
+						</select>
+					</label>
+
+					<label for="infoAlumni2">
+						<span id="infoAlumniLabel2"></span>
+						<select name="" id="infoAlumni2" required>
+							<option value="" selected>Pilih Jumlah Alumni di PTN</option>
+							<option value="0">Tidak Ada</option>
+							<option value="0.5">1 - 10</option>
+							<option value="1">11 - 20</option>
+							<option value="1.5">21 - 40</option>
+							<option value="2"> >40 </option>
+						</select>
+					</label>
+					<label for="isAlumniRegisted2">
+						<span id="isAlumniRegistedLabel2"></span>
+						<select name="" id="isAlumniRegisted2" required>
+							<option value="0" selected>Tidak Ada</option>
+							<option value="1">Ada</option>
+						</select>
+					</label>
+				</div>
+				<div class="footerContent">
+					*Untuk informasi tentang alumni, hubungi sekolah melalui guru BK atau staf terkait.
+				</div>
+			</div>
+
+			<div class="formGroup">
+				<h2 class="headerContent">Rata-Rata Nilai Raport dan Rangking</h2>
+				<div class="bodyContent">
+					<label for="rataNilai1">
+						<span>Rata-Rata Nilai Raport Semester 1</span>
+						<input type="number" name="" id="rataNilai1" required min="70">
+					</label>
+					<label for="rataNilai2">
+						<span>Rata-Rata Nilai Raport Semester 2</span>
+						<input type="number" name="" id="rataNilai2" required min="70">
+					</label>
+					<label for="rataNilai3">
+						<span>Rata-Rata Nilai Raport Semester 3</span>
+						<input type="number" name="" id="rataNilai3" required min="70">
+					</label>
+					<label for="rataNilai4">
+						<span>Rata-Rata Nilai Raport Semester 4</span>
+						<input type="number" name="" id="rataNilai4" required min="70">
+					</label>
+					<label for="rataNilai5">
+						<span>Rata-Rata Nilai Raport Semester 5</span>
+						<input type="number" name="" id="rataNilai5" required min="70">
+					</label>
+					<label for="rankingParalel">
+						<span>Rangking Paralel (Tidak Wajib)</span>
+						<input type="number" name="" id="rankingParalel">
+					</label>
+				</div>
+				<div class="footerContent">
+					*Hanya gunakan rata-rata nilai pengetahuan (kognitif) tiap mata pelajaran (bukan nilai
+					keterampilan/praktik).<br />
+					*Ranking paralel adalah peringkat siswa dalam satu sekolah di suatu jurusan berdasarkan nilai rapor
+					dari semester 1 hingga 5.
+				</div>
+			</div>
+
+			<div class="formGroup">
+				<h2 class="headerContent">Pilihan Pertama</h2>
+				<div class="bodyContent">
+					<label for="ptn1">
+						<span>PTN/Politeknik Negeri</span>
+						<input type="text" name="" id="ptn1" readonly>
+					</label>
+					<label for="prodi1">
+						<span>Jurusan/Prodi</span>
+						<input type="text" name="" id="prodi1" readonly>
+					</label>
+					<label for="kesesuaian1">
+						<span>Apakah Jurusan/Prodi sesuai dengan Jurusan SMA/SMK/MA?</span>
+						<select name="" id="kesesuaian1" required>
+							<option value="" selected>Pilih Kesesuaian</option>
+							<option value="1">Lintas Jurusan</option>
+							<option value="0">Tidak Lintas Jurusan</option>
+						</select>
+					</label>
+					<label for="nilaiRataKuliahSelect1">
+						<span>Jika jurusan sesuai, berapa rata-rata nilai mata pelajaran pendukung yang sesuai dengan
+							Jurusan/Prodi yang dipilih?</span>
+						<input type="number" name="" id="nilaiRataKuliah1" placeholder="Isi Nilai" required min="70">
+					</label>
+
+					<label for="jmlAlumniDiPTN1">
+						<span id="jmlAlumniDiPTNLabel1"></span>
+						<select name="" id="jmlAlumniDiPTN1" required>
+							<option value="" selected>Pilih Jumlah Alumni</option>
+							<option value="0">Tidak Ada</option>
+							<option value="5">1 - 10</option>
+							<option value="6">11 - 20</option>
+							<option value="7">21 - 40</option>
+							<option value="9">>40</option>
+						</select>
+					</label>
+				</div>
+			</div>
+
+			<div class="formGroup">
+				<h2 class="headerContent">Pilihan Kedua</h2>
+				<div class="bodyContent">
+					<label for="ptn2">
+						<span>Perguruan Tinggi Negeri</span>
+						<input type="text" name="" id="ptn2" readonly>
+					</label>
+					<label for="prodi2">
+						<span>Program Studi</span>
+						<input type="text" name="" id="prodi2" readonly>
+					</label>
+					<label for="kesesuaian2">
+						<span>Kesesuaian Pilihan dengan Jurusan SMA/SMK/MA?</span>
+						<select name="" id="kesesuaian2" required>
+							<option value="" selected>Pilih Kesesuaian</option>
+							<option value="1">Lintas Jurusan</option>
+							<option value="0">Tidak Lintas Jurusan</option>
+						</select>
+					</label>
+					<label for="nilaiRataKuliahSelect2">
+						<span>Nilai Rata-Rata Mata Kuliah Pendukung</span>
+						<input type="number" name="" id="nilaiRataKuliah2" placeholder="Isi Nilai" required min="70">
+					</label>
+
+					<label for="jmlAlumniDiPTN2">
+						<span id="jmlAlumniDiPTNLabel2"></span>
+						<select name="" id="jmlAlumniDiPTN2" required>
+							<option value="" selected>Pilih Jumlah Alumni</option>
+							<option value="0">Tidak Ada</option>
+							<option value="5">1 - 10</option>
+							<option value="6">11 - 20</option>
+							<option value="7">21 - 40</option>
+							<option value="9">>40</option>
+						</select>
+					</label>
+				</div>
+			</div>
+
+			<div class="formGroup">
+				<h2 class="headerContent">Prestasi 1 (Opsional)</h2>
+				<div class="bodyContent">
+					<label for="tingkatan1">
+						<span>Level</span>
+						<select name="" id="tingkatan1">
+							<option value="" selected>Pilih Level</option>
+							<option value="0.1">Kabupaten/Kota</option>
+							<option value="0.2">Provinsi</option>
+							<option value="0.3">Nasional</option>
+							<option value="0.5">Internasional</option>
+						</select>
+					</label>
+					<label for="penyelenggara1">
+						<span>Penyelenggara Kegiatan</span>
+						<select name="" id="penyelenggara1">
+							<option value="" selected>Pilih Penyelenggara</option>
+							<option value="0.2" id="penyelenggaraPtn1"></option>
+							<option value="0.2" id="penyelenggaraPtn2"></option>
+							<option value="0.3">Perguruan Tinggi Lainnya</option>
+							<option value="0.4">Pemerintahan</option>
+							<option value="0.5">Kementrian</option>
+							<option value="0">Lainnya</option>
+						</select>
+					</label>
+					<label for="peringkat1">
+						<span>Peringkat</span>
+						<select name="" id="peringkat1">
+							<option value="" selected>Pilih Peringkat</option>
+							<option value="2">Juara 1/Emas</option>
+							<option value="1.5">Juara 2/Perak</option>
+							<option value="1">Juara 3/Perunggu</option>
+							<option value="0.7">Juara Harapan 1</option>
+							<option value="0.5">Juara Harapan 2</option>
+							<option value="0.3">Juara Harapan 3</option>
+							<option value="0.2">Finalis</option>
+							<option value="0.1">Peserta</option>
+						</select>
+					</label>
+					<label for="kepersertaan1">
+						<span>Status Keikutsertaan</span>
+						<select name="" id="kepersertaan1">
+							<option value="" selected>Pilih Status</option>
+							<option value="1">Individu</option>
+							<option value="0.5">Kelompok</option>
+						</select>
+					</label>
+					<label for="kesesuaianProdiSelect1">
+						<span>Relevansi Bidang atau Kategori dengan Program Studi Pilihan</span>
+						<select name="" id="kesesuaianProdiSelect1">
+							<option value="" selected>Pilih Relevansi</option>
+							<option value="0">Tidak Ada Hubungan</option>
+							<option value="0.5" id="kesesuaianProdi1"></option>
+							<option value="0.5" id="kesesuaianProdi2"></option>
+							<option value="1">Berhubungan dengan Kedua Pilihan Prodi</option>
+						</select>
+					</label>
+				</div>
+			</div>
+
+			<div class="formGroup">
+				<h2 class="headerContent">Prestasi 2 (Opsional)</h2>
+				<div class="bodyContent">
+					<label for="tingkatan2">
+						<span>Level</span>
+						<select name="" id="tingkatan2">
+							<option value="" selected>Pilih Level</option>
+							<option value="0.1">Kabupaten/Kota</option>
+							<option value="0.2">Provinsi</option>
+							<option value="0.3">Nasional</option>
+							<option value="0.5">Internasional</option>
+						</select>
+					</label>
+					<label for="penyelenggara2">
+						<span>Penyelenggara Kegiatan</span>
+						<select name="" id="penyelenggara2">
+							<option value="" selected>Pilih Penyelenggara</option>
+							<option value="0.2" id="penyelenggaraPtn1"></option>
+							<option value="0.2" id="penyelenggaraPtn2"></option>
+							<option value="0.3">Perguruan Tinggi Lainnya</option>
+							<option value="0.4">Pemerintahan</option>
+							<option value="0.5">Kementrian</option>
+							<option value="0">Lainnya</option>
+						</select>
+					</label>
+					<label for="peringkat2">
+						<span>Peringkat</span>
+						<select name="" id="peringkat2">
+							<option value="" selected>Pilih Peringkat</option>
+							<option value="2">Juara 1/Emas</option>
+							<option value="1.5">Juara 2/Perak</option>
+							<option value="1">Juara 3/Perunggu</option>
+							<option value="0.7">Juara Harapan 1</option>
+							<option value="0.5">Juara Harapan 2</option>
+							<option value="0.3">Juara Harapan 3</option>
+							<option value="0.2">Finalis</option>
+							<option value="0.1">Peserta</option>
+						</select>
+					</label>
+					<label for="kepersertaan2">
+						<span>Status Keikutsertaan</span>
+						<select name="" id="kepersertaan2">
+							<option value="" selected>Pilih Status</option>
+							<option value="1">Individu</option>
+							<option value="0.5">Kelompok</option>
+						</select>
+					</label>
+					<label for="kesesuaianProdiSelect2">
+						<span>Relevansi Bidang atau Kategori dengan Program Studi Pilihan</span>
+						<select name="" id="kesesuaianProdiSelect2">
+							<option value="" selected>Pilih Relevansi</option>
+							<option value="0">Tidak Ada Hubungan</option>
+							<option value="0.5" id="kesesuaianProdi1"></option>
+							<option value="0.5" id="kesesuaianProdi2"></option>
+							<option value="1">Berhubungan dengan Kedua Pilihan Prodi</option>
+						</select>
+					</label>
+				</div>
+			</div>
+
+			<div class="formGroup">
+				<h2 class="headerContent">Prestasi 3 (Opsional)</h2>
+				<div class="bodyContent">
+					<label for="tingkatan3">
+						<span>Level</span>
+						<select name="" id="tingkatan3">
+							<option value="" selected>Pilih Level</option>
+							<option value="0.1">Kabupaten/Kota</option>
+							<option value="0.2">Provinsi</option>
+							<option value="0.3">Nasional</option>
+							<option value="0.5">Internasional</option>
+						</select>
+					</label>
+					<label for="penyelenggara3">
+						<span>Penyelenggara Kegiatan</span>
+						<select name="" id="penyelenggara3">
+							<option value="" selected>Pilih Penyelenggara</option>
+							<option value="0.2" id="penyelenggaraPtn1"></option>
+							<option value="0.2" id="penyelenggaraPtn2"></option>
+							<option value="0.3">Perguruan Tinggi Lainnya</option>
+							<option value="0.4">Pemerintahan</option>
+							<option value="0.5">Kementrian</option>
+							<option value="0">Lainnya</option>
+						</select>
+					</label>
+					<label for="peringkat3">
+						<span>Peringkat</span>
+						<select name="" id="peringkat3">
+							<option value="" selected>Pilih Peringkat</option>
+							<option value="2">Juara 1/Emas</option>
+							<option value="1.5">Juara 2/Perak</option>
+							<option value="1">Juara 3/Perunggu</option>
+							<option value="0.7">Juara Harapan 1</option>
+							<option value="0.5">Juara Harapan 2</option>
+							<option value="0.3">Juara Harapan 3</option>
+							<option value="0.2">Finalis</option>
+							<option value="0.1">Peserta</option>
+						</select>
+					</label>
+					<label for="kepersertaan3">
+						<span>Status Keikutsertaan</span>
+						<select name="" id="kepersertaan3">
+							<option value="" selected>Pilih Status</option>
+							<option value="1">Individu</option>
+							<option value="0.5">Kelompok</option>
+						</select>
+					</label>
+					<label for="kesesuaianProdiSelect3">
+						<span>Relevansi Bidang atau Kategori dengan Program Studi Pilihan</span>
+						<select name="" id="kesesuaianProdiSelect3">
+							<option value="" selected>Pilih Relevansi</option>
+							<option value="0">Tidak Ada Hubungan</option>
+							<option value="0.5" id="kesesuaianProdi1"></option>
+							<option value="0.5" id="kesesuaianProdi2"></option>
+							<option value="1">Berhubungan dengan Kedua Pilihan Prodi</option>
+						</select>
+					</label>
+				</div>
+			</div>
+
+			<button class="btn-next" type="submit">Lihat Hasil Rasionalisasi</button>
+		</form>
+
+	</main>
+
+	<script src="snbp-script-3.js"></script>
+	<script src="snbp-script-1.js"></script>
+
+</body>
+
+</html>
