@@ -1,5 +1,6 @@
 [
   {
+    "provinsi": "Aceh",
     "ptn": "Universitas Syiah Kuala",
     "singkatan": "USK/",
     "url": "https://cerdasy.com/rata-rata-nilai-raport-snbp-usk/",
@@ -387,6 +388,7 @@
     ]
   },
   {
+    "provinsi": "Aceh",
     "ptn": "Universitas Malikussaleh",
     "singkatan": "UNIMAL/",
     "url": "https://cerdasy.com/rata-rata-nilai-raport-snbp-unimal/",
@@ -564,6 +566,7 @@
     ]
   },
   {
+    "provinsi": "Aceh",
     "ptn": "Universitas Teuku Umar",
     "singkatan": "UTU/",
     "url": "https://cerdasy.com/rata-rata-nilai-raport-snbp-utu/",
@@ -691,6 +694,7 @@
     ]
   },
   {
+    "provinsi": "Aceh",
     "ptn": "Universitas Samudra",
     "singkatan": "UNSAM/",
     "url": "https://cerdasy.com/rata-rata-nilai-raport-snbp-unsam/",
@@ -843,6 +847,7 @@
     ]
   },
   {
+    "provinsi": "Sumatera Utara",
     "ptn": "Universitas Sumatera Utara",
     "singkatan": "USU/",
     "url": "https://cerdasy.com/rata-rata-nilai-raport-snbp-usu/",
@@ -1160,6 +1165,7 @@
     ]
   },
   {
+    "provinsi": "Sumatera Utara",
     "ptn": "Universitas Negeri Medan",
     "singkatan": "UNIMED/",
     "url": "https://cerdasy.com/rata-rata-nilai-raport-snbp-unimed/",
@@ -1452,6 +1458,7 @@
     ]
   },
   {
+    "provinsi": "Riau",
     "ptn": "Universitas Riau",
     "singkatan": "UNRI/",
     "url": "https://cerdasy.com/rata-rata-nilai-raport-snbp-unri/",
@@ -1784,6 +1791,7 @@
     ]
   },
   {
+    "provinsi": "Kepulauan Riau",
     "ptn": "Universitas Maritim Raja Ali Haji",
     "singkatan": "UMRAH/",
     "url": "https://cerdasy.com/rata-rata-nilai-raport-snbp-umrah/",
@@ -1921,6 +1929,7 @@
     ]
   },
   {
+    "provinsi": "Sumatera Barat",
     "ptn": "Universitas Andalas",
     "singkatan": "UNAND/",
     "url": "https://cerdasy.com/rata-rata-nilai-raport-snbp-unand/",
@@ -2213,6 +2222,7 @@
     ]
   },
   {
+    "provinsi": "Sumatera Barat",
     "ptn": "Universitas Negeri Padang",
     "singkatan": "UNP/",
     "url": "https://cerdasy.com/rata-rata-nilai-raport-snbp-unp/",
@@ -2720,6 +2730,7 @@
     ]
   },
   {
+    "provinsi": "Jambi",
     "ptn": "Universitas Jambi",
     "singkatan": "UNJA/",
     "url": "https://cerdasy.com/rata-rata-nilai-raport-snbp-unja/",
@@ -3057,6 +3068,7 @@
     ]
   },
   {
+    "provinsi": "Bengkulu",
     "ptn": "Universitas Bengkulu",
     "singkatan": "UNIB/",
     "url": "https://cerdasy.com/rata-rata-nilai-raport-snbp-unib/",
@@ -3314,6 +3326,7 @@
     ]
   },
   {
+    "provinsi": "Sumatera Selatan",
     "ptn": "Universitas Sriwijaya",
     "singkatan": "UNSRI/",
     "url": "https://cerdasy.com/rata-rata-nilai-raport-snbp-unsri/",
@@ -3626,6 +3639,7 @@
     ]
   },
   {
+    "provinsi": "Kep. Bangka Belitung",
     "ptn": "Universitas Bangka Belitung",
     "singkatan": "UBB/",
     "url": "https://cerdasy.com/rata-rata-nilai-raport-snbp-ubb/",
@@ -3768,6 +3782,7 @@
     ]
   },
   {
+    "provinsi": "Lampung",
     "ptn": "Universitas Lampung",
     "singkatan": "UNILA/",
     "url": "https://cerdasy.com/rata-rata-nilai-raport-snbp-unila/",
@@ -4170,6 +4185,7 @@
     ]
   },
   {
+    "provinsi": "Lampung",
     "ptn": "Institut Teknologi Sumatera",
     "singkatan": "ITERA/",
     "url": "https://cerdasy.com/rata-rata-nilai-raport-snbp-itera/",
@@ -4382,6 +4398,7 @@
     ]
   },
   {
+    "provinsi": "Banten",
     "ptn": "Universitas Sultan Ageng Tirtayasa",
     "singkatan": "UNTIRTA/",
     "url": "https://cerdasy.com/rata-rata-nilai-raport-snbp-untirta/",
@@ -4629,6 +4646,7 @@
     ]
   },
   {
+    "provinsi": "Jakarta Raya",
     "ptn": "Universitas Indonesia",
     "singkatan": "UI/",
     "url": "https://cerdasy.com/rata-rata-nilai-raport-snbp-ui/",
@@ -5031,6 +5049,7 @@
     ]
   },
   {
+    "provinsi": "Jakarta Raya",
     "ptn": "Universitas Negeri Jakarta",
     "singkatan": "UNJ/",
     "url": "https://cerdasy.com/rata-rata-nilai-raport-snbp-unj/",
@@ -5423,6 +5442,7 @@
     ]
   },
   {
+    "provinsi": "Jakarta Raya",
     "ptn": "UPN “Veteran” Jakarta",
     "singkatan": "UPN-JAKARTA/",
     "url": "https://cerdasy.com/rata-rata-nilai-raport-snbp-upn-jakarta/",
@@ -5570,6 +5590,7 @@
     ]
   },
   {
+    "provinsi": "Jawa Barat",
     "ptn": "Universitas Singaperbangsa Karawang",
     "singkatan": "UNSIKA/",
     "url": "https://cerdasy.com/rata-rata-nilai-raport-snbp-unsika/",
@@ -5722,6 +5743,7 @@
     ]
   },
   {
+    "provinsi": "Jawa Barat",
     "ptn": "Institut Teknologi Bandung",
     "singkatan": "ITB/",
     "url": "https://cerdasy.com/rata-rata-nilai-raport-snbp-itb/",
@@ -5969,6 +5991,7 @@
     ]
   },
   {
+    "provinsi": "Jawa Barat",
     "ptn": "Universitas Padjadjaran",
     "singkatan": "UNPAD/",
     "url": "https://cerdasy.com/rata-rata-nilai-raport-snbp-unpad/",
@@ -6336,6 +6359,7 @@
     ]
   },
   {
+    "provinsi": "Jawa Barat",
     "ptn": "Universitas Pendidikan Indonesia",
     "singkatan": "UPI/",
     "url": "https://cerdasy.com/rata-rata-nilai-raport-snbp-upi/",
@@ -6873,6 +6897,7 @@
     ]
   },
   {
+    "provinsi": "Jawa Barat",
     "ptn": "Institut Pertanian Bogor",
     "singkatan": "IPB/",
     "url": "https://cerdasy.com/rata-rata-nilai-raport-snbp-ipb/",
@@ -7205,6 +7230,7 @@
     ]
   },
   {
+    "provinsi": "Jawa Barat",
     "ptn": "Universitas Siliwangi",
     "singkatan": "UNSIL/",
     "url": "https://cerdasy.com/rata-rata-nilai-raport-snbp-unsil/",
@@ -7347,6 +7373,7 @@
     ]
   },
   {
+    "provinsi": "Jawa Tengah",
     "ptn": "Universitas Jenderal Soedirman",
     "singkatan": "UNSOED/",
     "url": "https://cerdasy.com/rata-rata-nilai-raport-snbp-unsoed/",
@@ -7634,6 +7661,7 @@
     ]
   },
   {
+    "provinsi": "Jawa Tengah",
     "ptn": "Universitas Tidar",
     "singkatan": "UNTIDAR/",
     "url": "https://cerdasy.com/rata-rata-nilai-raport-snbp-untidar/",
@@ -7781,6 +7809,7 @@
     ]
   },
   {
+    "provinsi": "Jawa Tengah",
     "ptn": "Universitas Sebelas Maret",
     "singkatan": "UNS/",
     "url": "https://cerdasy.com/rata-rata-nilai-raport-snbp-uns/",
@@ -8273,6 +8302,7 @@
     ]
   },
   {
+    "provinsi": "Jawa Tengah",
     "ptn": "Universitas Diponegoro",
     "singkatan": "UNDIP/",
     "url": "https://cerdasy.com/rata-rata-nilai-raport-snbp-undip/",
@@ -8620,6 +8650,7 @@
     ]
   },
   {
+    "provinsi": "Jawa Tengah",
     "ptn": "Universitas Negeri Semarang",
     "singkatan": "UNNES/",
     "url": "https://cerdasy.com/rata-rata-nilai-raport-snbp-unnes/",
@@ -9007,6 +9038,7 @@
     ]
   },
   {
+    "provinsi": "Yogyakarta",
     "ptn": "Universitas Gadjah Mada",
     "singkatan": "UGM/",
     "url": "https://cerdasy.com/rata-rata-nilai-raport-snbp-ugm/",
@@ -9479,6 +9511,7 @@
     ]
   },
   {
+    "provinsi": "Yogyakarta",
     "ptn": "Universitas Negeri Yogyakarta",
     "singkatan": "UNY/",
     "url": "https://cerdasy.com/rata-rata-nilai-raport-snbp-uny/",
@@ -9891,6 +9924,7 @@
     ]
   },
   {
+    "provinsi": "Yogyakarta",
     "ptn": "UPN “Veteran” Yogyakarta",
     "singkatan": "UPN-JOGJA/",
     "url": "https://cerdasy.com/rata-rata-nilai-raport-snbp-upn-jogja/",
@@ -10008,6 +10042,7 @@
     ]
   },
   {
+    "provinsi": "Jawa Timur",
     "ptn": "Universitas Jember",
     "singkatan": "UNEJ/",
     "url": "https://cerdasy.com/rata-rata-nilai-raport-snbp-unej/",
@@ -10375,6 +10410,7 @@
     ]
   },
   {
+    "provinsi": "Jawa Timur",
     "ptn": "Universitas Brawijaya",
     "singkatan": "UB/",
     "url": "https://cerdasy.com/rata-rata-nilai-raport-snbp-ub/",
@@ -10797,6 +10833,7 @@
     ]
   },
   {
+    "provinsi": "Jawa Timur",
     "ptn": "Universitas Negeri Malang",
     "singkatan": "UM/",
     "url": "https://cerdasy.com/rata-rata-nilai-raport-snbp-um/",
@@ -11204,6 +11241,7 @@
     ]
   },
   {
+    "provinsi": "Jawa Timur",
     "ptn": "Universitas Airlangga",
     "singkatan": "UNAIR/",
     "url": "https://cerdasy.com/rata-rata-nilai-raport-snbp-unair/",
@@ -11526,6 +11564,7 @@
     ]
   },
   {
+    "provinsi": "Jawa Timur",
     "ptn": "Institut Teknologi Sepuluh Nopember",
     "singkatan": "ITS/",
     "url": "https://cerdasy.com/rata-rata-nilai-raport-snbp-its/",
@@ -11813,6 +11852,7 @@
     ]
   },
   {
+    "provinsi": "Jawa Timur",
     "ptn": "Universitas Negeri Surabaya",
     "singkatan": "UNESA/",
     "url": "https://cerdasy.com/rata-rata-nilai-raport-snbp-unesa/",
@@ -12365,6 +12405,7 @@
     ]
   },
   {
+    "provinsi": "Jawa Timur",
     "ptn": "Universitas Trunojoyo Madura",
     "singkatan": "TRUNOJOYO/",
     "url": "https://cerdasy.com/rata-rata-nilai-raport-snbp-trunojoyo/",
@@ -12512,6 +12553,7 @@
     ]
   },
   {
+    "provinsi": "Jawa Timur",
     "ptn": "UPN “Veteran” Jawa Timur",
     "singkatan": "UPN-JATIM/",
     "url": "https://cerdasy.com/rata-rata-nilai-raport-snbp-upn-jatim/",
@@ -12664,6 +12706,7 @@
     ]
   },
   {
+    "provinsi": "Kalimantan Barat",
     "ptn": "Universitas Tanjungpura",
     "singkatan": "UNTAN/",
     "url": "https://cerdasy.com/rata-rata-nilai-raport-snbp-untan/",
@@ -13016,6 +13059,7 @@
     ]
   },
   {
+    "provinsi": "Kalimantan Tengah",
     "ptn": "Universitas Palangkaraya",
     "singkatan": "UPR/",
     "url": "https://cerdasy.com/rata-rata-nilai-raport-snbp-upr/",
@@ -13243,6 +13287,7 @@
     ]
   },
   {
+    "provinsi": "Kalimantan Selatan",
     "ptn": "Universitas Lambung Mangkurat",
     "singkatan": "ULM/",
     "url": "https://cerdasy.com/rata-rata-nilai-raport-snbp-ulm/",
@@ -13595,6 +13640,7 @@
     ]
   },
   {
+    "provinsi": "Kalimantan Timur",
     "ptn": "Universitas Mulawarman",
     "singkatan": "UNMUL/",
     "url": "https://cerdasy.com/rata-rata-nilai-raport-snbp-unmul/",
@@ -13937,6 +13983,7 @@
     ]
   },
   {
+    "provinsi": "Kalimantan Timur",
     "ptn": "Institut Teknologi Kalimantan",
     "singkatan": "ITK/",
     "url": "https://cerdasy.com/rata-rata-nilai-raport-snbp-itk/",
@@ -14054,6 +14101,7 @@
     ]
   },
   {
+    "provinsi": "Kalimantan Utara",
     "ptn": "Universitas Borneo Tarakan",
     "singkatan": "UBT/",
     "url": "https://cerdasy.com/rata-rata-nilai-raport-snbp-ubt/",
@@ -14186,6 +14234,7 @@
     ]
   },
   {
+    "provinsi": "Bali",
     "ptn": "Universitas Udayana",
     "singkatan": "UNUD/",
     "url": "https://cerdasy.com/rata-rata-nilai-raport-snbp-unud/",
@@ -14458,6 +14507,7 @@
     ]
   },
   {
+    "provinsi": "Bali",
     "ptn": "Universitas Pendidikan Ganesha",
     "singkatan": "UNDIKSHA/",
     "url": "https://cerdasy.com/rata-rata-nilai-raport-snbp-undiksha/",
@@ -14725,6 +14775,7 @@
     ]
   },
   {
+    "provinsi": "Nusa Tenggara Barat",
     "ptn": "Universitas Mataram",
     "singkatan": "UNRAM/",
     "url": "https://cerdasy.com/rata-rata-nilai-raport-snbp-unram/",
@@ -14952,6 +15003,7 @@
     ]
   },
   {
+    "provinsi": "Nusa Tenggara Timur",
     "ptn": "Universitas Nusa Cendana",
     "singkatan": "UNDANA/",
     "url": "https://cerdasy.com/rata-rata-nilai-raport-snbp-undana/",
@@ -15204,6 +15256,7 @@
     ]
   },
   {
+    "provinsi": "Nusa Tenggara Timur",
     "ptn": "Universitas Timor",
     "singkatan": "UNIMOR/",
     "url": "https://cerdasy.com/rata-rata-nilai-raport-snbp-unimor/",
@@ -15291,6 +15344,7 @@
     ]
   },
   {
+    "provinsi": "Sulawesi Selatan",
     "ptn": "Universitas Hasanuddin",
     "singkatan": "UNHAS/",
     "url": "https://cerdasy.com/rata-rata-nilai-raport-snbp-unhas/",
@@ -15718,6 +15772,7 @@
     ]
   },
   {
+    "provinsi": "Sulawesi Selatan",
     "ptn": "Universitas Negeri Makassar",
     "singkatan": "UNM-MAKASSAR/",
     "url": "https://cerdasy.com/rata-rata-nilai-raport-snbp-unm-makassar/",
@@ -16190,6 +16245,7 @@
     ]
   },
   {
+    "provinsi": "Sulawesi Utara",
     "ptn": "Universitas Sam Ratulangi",
     "singkatan": "UNSRAT/",
     "url": "https://cerdasy.com/rata-rata-nilai-raport-snbp-unsrat/",
@@ -16442,6 +16498,7 @@
     ]
   },
   {
+    "provinsi": "Sulawesi Utara",
     "ptn": "Universitas Negeri Manado",
     "singkatan": "UNIMA/",
     "url": "https://cerdasy.com/rata-rata-nilai-raport-snbp-unima/",
@@ -16704,6 +16761,7 @@
     ]
   },
   {
+    "provinsi": "Sulawesi Tengah",
     "ptn": "Universitas Tadulako",
     "singkatan": "UNTAD/",
     "url": "https://cerdasy.com/rata-rata-nilai-raport-snbp-untad/",
@@ -17026,6 +17084,7 @@
     ]
   },
   {
+    "provinsi": "Sulawesi Barat",
     "ptn": "Universitas Sulawesi Barat",
     "singkatan": "UNSULBAR/",
     "url": "https://cerdasy.com/rata-rata-nilai-raport-snbp-unsulbar/",
@@ -17218,6 +17277,7 @@
     ]
   },
   {
+    "provinsi": "Sulawesi Tenggara",
     "ptn": "Universitas Halu Oleo",
     "singkatan": "UHO-2/",
     "url": "https://cerdasy.com/rata-rata-nilai-raport-snbp-uho-2/",
@@ -17635,6 +17695,7 @@
     ]
   },
   {
+    "provinsi": "Gorontalo",
     "ptn": "Universitas Negeri Gorontalo",
     "singkatan": "UNG/",
     "url": "https://cerdasy.com/rata-rata-nilai-raport-snbp-ung/",
@@ -17962,6 +18023,7 @@
     ]
   },
   {
+    "provinsi": "Sulawesi Tenggara",
     "ptn": "Universitas Sembilan Belas November Kolaka",
     "singkatan": "USN-KOLAKA/",
     "url": "https://cerdasy.com/rata-rata-nilai-raport-snbp-usn-kolaka/",
@@ -18119,6 +18181,7 @@
     ]
   },
   {
+    "provinsi": "Maluku",
     "ptn": "Universitas Pattimura",
     "singkatan": "UNPATTI/",
     "url": "https://cerdasy.com/rata-rata-nilai-raport-snbp-unpatti/",
@@ -18501,6 +18564,7 @@
     ]
   },
   {
+    "provinsi": "Maluku Utara",
     "ptn": "Universitas Khairun",
     "singkatan": "UNKHAIR/",
     "url": "https://cerdasy.com/rata-rata-nilai-raport-snbp-unkhair/",

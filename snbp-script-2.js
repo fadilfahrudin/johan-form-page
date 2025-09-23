@@ -75,7 +75,7 @@ form.addEventListener("submit", function (e) {
   });
 
   // Redirect to page goal
-  // "https://haipintar.com/bandingkan-ptn?" wp url
+  // "https://haipintar.com/bandingkan-ptn-snbp?" wp url
   const urlPage = "banding-nilai.html";
   window.location.href = urlPage + "?" + params.toString(); //
 });

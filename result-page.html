@@ -21,6 +21,8 @@
             --color-yellow-disabled: #fcb900c1;
             --color-green: rgb(2, 106, 92);
             --color-green-disabled: rgba(2, 106, 92, 0.654);
+            --color-warning: rgb(241, 48, 48);
+            --color-success: rgb(10, 212, 185);
         }
 
         body {
@@ -62,7 +64,7 @@
             border-radius: 8px;
         }
 
-        .cardResult .headerContent {
+        .cardResult h2.headerContent {
             width: 100%;
             height: auto;
             line-height: 150%;
@@ -70,6 +72,22 @@
             background-color: var(--color-black);
             color: var(--color-white);
             padding: 8px 0;
+        }
+
+        .cardResult h2.pendukung {
+            background-color: var(--color-success);
+        }
+
+        .cardResult:has(h2.pendukung) {
+            border: 2px solid var(--color-success);
+        }
+
+        .cardResult h2.penghambat {
+            background-color: var(--color-warning);
+        }
+
+        .cardResult:has(h2.penghambat) {
+            border: 2px solid var(--color-warning);
         }
 
         .cardResult .bodyContent {
@@ -89,34 +107,11 @@
             border-top: 1px solid var(--color-black);
         }
 
-        .progressResult {
+        .progressWrapper {
             display: flex;
             flex-direction: column;
             gap: 8px;
             width: 100%;
-        }
-
-        progress {
-            background-color: #eee;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
-            width: 100%;
-        }
-
-        progress::-moz-progress-bar {
-            background-color: rgb(206, 209, 12);
-            border-radius: 7px;
-            box-shadow: 1px 1px 3px 3px rgba(28, 27, 27, 0.102);
-        }
-
-        progress#prog-2::-moz-progress-bar {
-            background-color: rgb(58, 244, 111);
-        }
-
-        progress::-webkit-progress-bar {
-            background-color: #eee;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
         }
 
 
@@ -161,33 +156,74 @@
         .progress-green span {
             background-color: var(--color-green);
         }
+
+        section.resultPage {
+            margin: 20px 0;
+        }
+
+        ul.listInfo{
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            font-size: clamp(12px, 1.3vw, 14px);
+        }
+
+        ul.listInfo li{
+            list-style-type: disc;
+            margin-left: 20px;
+        }
     </style>
 </head>
 
 <body>
     <main class="container">
-        <div class="cardResult">
-            <div class="headerContent">Prediksi Kelulusan SNBP</div>
-            <div class="bodyContent">
-                <div class="progressResult">
-                    <!-- <div>
-                        <progress id="prog-1" max="100" value=""></progress>
-                    </div>
-                    <div>
-                        <progress id="prog-2" max="100" value=""></progress>
-                    </div> -->
-
-                    <label for="prog-1" id="pilLabel1"></label>
-                    <div class="animated-progress progress-yellow">
-                        <span class="progress" data-progress="0"></span>
-                    </div>
-                    <label for="prog-2" id="pilLabel2"></label>
-                    <div class="animated-progress progress-green">
-                        <span class="progress" data-progress="0"></span>
+        <section class="resultPage">
+            <div class="cardResult">
+                <h2 class="headerContent">Prediksi Kelulusan SNBP</h2>
+                <div class="bodyContent">
+                    <div class="progressWrapper">
+                        <span  id="pilLabel1"></span>
+                        <div class="animated-progress progress-yellow">
+                            <span class="progress" data-progress="0"></span>
+                        </div>
+                        <span  id="pilLabel2"></span>
+                        <div class="animated-progress progress-green">
+                            <span class="progress" data-progress="0"></span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+
+        <section class="resultPage">
+            <div class="cardResult">
+                <h2 class="headerContent pendukung">Faktor Pendukung</h2>
+                <div class="bodyContent">
+                    <ul class="listInfo">
+                        <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, eveniet.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel dignissimos a dicta vitae nesciunt ducimus voluptatum culpa soluta beatae ullam.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti commodi et fugit dolor beatae maiores.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, deserunt facere?</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum maxime, dignissimos deserunt officia expedita est alias. Expedita animi praesentium earum inventore debitis, quam sunt corrupti?</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="resultPage">
+            <div class="cardResult">
+                <h2 class="headerContent penghambat">Faktor Penghambat</h2>
+                <div class="bodyContent">
+                    <ul class="listInfo">
+                        <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, eveniet.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel dignissimos a dicta vitae nesciunt ducimus voluptatum culpa soluta beatae ullam.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti commodi et fugit dolor beatae maiores.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, deserunt facere?</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum maxime, dignissimos deserunt officia expedita est alias. Expedita animi praesentium earum inventore debitis, quam sunt corrupti?</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
     </main>
 
     <script src="snbp-script-4.js"></script>
