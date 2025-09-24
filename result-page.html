@@ -68,26 +68,10 @@
             width: 100%;
             height: auto;
             line-height: 150%;
-            text-align: center;
             background-color: var(--color-black);
             color: var(--color-white);
-            padding: 8px 0;
-        }
-
-        .cardResult h2.pendukung {
-            background-color: var(--color-success);
-        }
-
-        .cardResult:has(h2.pendukung) {
-            border: 2px solid var(--color-success);
-        }
-
-        .cardResult h2.penghambat {
-            background-color: var(--color-warning);
-        }
-
-        .cardResult:has(h2.penghambat) {
-            border: 2px solid var(--color-warning);
+            padding: 8px;
+            margin: 0;
         }
 
         .cardResult .bodyContent {
@@ -161,35 +145,90 @@
             margin: 20px 0;
         }
 
-        ul.listInfo{
+        ul.listInfo {
             display: flex;
             flex-direction: column;
             gap: 8px;
             font-size: clamp(12px, 1.3vw, 14px);
+            padding: 8px;
         }
 
-        ul.listInfo li{
+        ul.listInfo li {
             list-style-type: disc;
             margin-left: 20px;
+        }
+
+        h2.headerPage {
+            width: 100%;
+            height: auto;
+            line-height: 150%;
+            color: var(--color-black);
+            padding: 8px 0;
+            font-weight: bold;
+            font-size: clamp(24px, 4vw, 30px);
+        }
+
+        .spesifikasi{
+            margin: 8px 0;
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .spesifikasi span.headerList {
+            display: block;
+            width: 100%;
+            height: auto;
+            line-height: 150%;
+            background-color: var(--color-black);
+            color: var(--color-white);
+            padding: 8px;
+            font-weight: 600;
+            font-size: clamp(14px, 2vw, 16px);
+        }
+
+
+        .keunggulan span.headerList {
+            background-color: var(--color-success);
+        }
+
+        .spesifikasi.keunggulan {
+            border: 2px solid var(--color-success);
+        }
+
+        .kelemahan span.headerList {
+            background-color: var(--color-warning);
+        }
+
+        .spesifikasi.kelemahan {
+            border: 2px solid var(--color-warning);
         }
     </style>
 </head>
 
 <body>
     <main class="container">
+
+        <h2 class="headerPage">Prediksi Kelulusan SNBP</h2>
+
         <section class="resultPage">
             <div class="cardResult">
-                <h2 class="headerContent">Prediksi Kelulusan SNBP</h2>
+                <h2 class="headerContent">Pilihan 1</h2>
                 <div class="bodyContent">
                     <div class="progressWrapper">
-                        <span  id="pilLabel1"></span>
+                        <span id="pilLabel1"></span>
                         <div class="animated-progress progress-yellow">
                             <span class="progress" data-progress="0"></span>
                         </div>
-                        <span  id="pilLabel2"></span>
-                        <div class="animated-progress progress-green">
-                            <span class="progress" data-progress="0"></span>
-                        </div>
+                    </div>
+                    <div class="spesifikasi keunggulan">
+                        <span class="headerList">Keunggulan</span>
+                        <ul class="listInfo"></ul>
+                    </div>
+                    <div class="spesifikasi kelemahan">
+                        <span class="headerList">Kelemahan</span>
+                        <ul class="listInfo"></ul>
                     </div>
                 </div>
             </div>
@@ -197,30 +236,22 @@
 
         <section class="resultPage">
             <div class="cardResult">
-                <h2 class="headerContent pendukung">Faktor Pendukung</h2>
+                <h2 class="headerContent">Pilihan 2</h2>
                 <div class="bodyContent">
-                    <ul class="listInfo">
-                        <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, eveniet.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel dignissimos a dicta vitae nesciunt ducimus voluptatum culpa soluta beatae ullam.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti commodi et fugit dolor beatae maiores.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, deserunt facere?</li>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum maxime, dignissimos deserunt officia expedita est alias. Expedita animi praesentium earum inventore debitis, quam sunt corrupti?</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section class="resultPage">
-            <div class="cardResult">
-                <h2 class="headerContent penghambat">Faktor Penghambat</h2>
-                <div class="bodyContent">
-                    <ul class="listInfo">
-                        <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, eveniet.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel dignissimos a dicta vitae nesciunt ducimus voluptatum culpa soluta beatae ullam.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti commodi et fugit dolor beatae maiores.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, deserunt facere?</li>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum maxime, dignissimos deserunt officia expedita est alias. Expedita animi praesentium earum inventore debitis, quam sunt corrupti?</li>
-                    </ul>
+                    <div class="progressWrapper">
+                        <span id="pilLabel2"></span>
+                        <div class="animated-progress progress-green">
+                            <span class="progress" data-progress="0"></span>
+                        </div>
+                    </div>
+                    <div class="spesifikasi keunggulan">
+                        <span class="headerList">Keunggulan</span>
+                        <ul class="listInfo"></ul>
+                    </div>
+                    <div class="spesifikasi kelemahan">
+                        <span class="headerList">Kelemahan</span>
+                        <ul class="listInfo"></ul>
+                    </div>
                 </div>
             </div>
         </section>

@@ -112,9 +112,17 @@ form.addEventListener("submit", function (e) {
             const rataNilaiRaport = (Number(rataNilai1) + Number(rataNilai2) + Number(rataNilai3) + Number(rataNilai4) + Number(rataNilai5)) / 5
 
             if (rataNilaiRaport > standarNilaiProdiA || rataNilaiRaport > standarNilaiProdiB) {
-                return 15
+                const object = {
+                    point: 15,
+                    rataNilaiRaport: rataNilaiRaport
+                }
+                return object
             } else {
-                return 0
+                const object = {
+                    point: 0,
+                    rataNilaiRaport: rataNilaiRaport
+                }
+                return object
             }
         }
 
@@ -144,7 +152,14 @@ form.addEventListener("submit", function (e) {
             return point
         }
 
-        return rataRataNiail() + isNilaiRaportInterval() + rankingParalelPoint()
+        const nilaiObnject = {
+            rataRataNilai: rataRataNiail(),
+            intervalRaport: isNilaiRaportInterval(),
+            rankingParalel: rankingParalelPoint(),
+            totalNilai: rataRataNiail().point + isNilaiRaportInterval() + rankingParalelPoint()
+        }
+
+        return nilaiObnject
     }
 
 
@@ -180,7 +195,7 @@ form.addEventListener("submit", function (e) {
 
 
 
-    const globalPoint = profileSkolahPoint + getNilaiRaport() + getNilaiPrestasi(1) + getNilaiPrestasi(2) + getNilaiPrestasi(3)
+    const globalPoint = profileSkolahPoint + getNilaiRaport().totalNilai + getNilaiPrestasi(1) + getNilaiPrestasi(2) + getNilaiPrestasi(3)
     console.log("globalPoint: ", globalPoint)
 
 
@@ -207,12 +222,15 @@ form.addEventListener("submit", function (e) {
             prodi2: params.get("prodi2"),
             predictPtnA: nPredictPTN1InPercentage,
             predictPtnB: nPredictPTN2InPercentage,
-            nRataRataRaport: getNilaiRaport(),
+            nilaiRataRataRaport: getNilaiRaport().rataRataNilai.rataNilaiRaport,
+            nilaiIntervalRaport: getNilaiRaport().intervalRaport,
+            nilaiRankingParalel: getNilaiRaport().rankingParalel,
+            profileSekolah: profileSkolahPoint,
             provDomisili: domisili,
             pringkatSkolah: nPeingkatSekolah,
             akreditasSekolah: nAkreditasSkolah,
-            reputasiAlumniPTN1: reputasiAlumniPointPTN1,
-            reputasiAlumniPTN2: reputasiAlumniPointPTN2,
+            reputasiAlumniPTN1: nInfoAlumni1,
+            reputasiAlumniPTN2: nInfoAlumni2,
             isAlumniRegisted: nIsAlumniRegisted1,
             isAlumniRegisted2: nIsAlumniRegisted2,
             kesesuaianJurusan1: Number(document.getElementById("kesesuaianJurusan1").value),
